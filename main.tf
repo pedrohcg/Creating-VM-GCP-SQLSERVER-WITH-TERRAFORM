@@ -5,20 +5,10 @@ provider "google" {
     access_token = var.token
 }
 
-resource "google_compute_network" "default" {
-  name = "dev-network"
-}
-
-resource "google_compute_subnetwork" "default" {
-  name          = "dev-subnet"
-  ip_cidr_range = "10.0.0.0/16"
-  network       = google_compute_network.default.id
-}
-
 module "ip-address" {
     source = "./modules/ip-address"
     name = var.vm_name
-    network_id = google_compute_subnetwork.default.id
+    network_id = var.subnet
 }
 
 module "disk-data" {
@@ -39,7 +29,7 @@ module "gcp-instance" {
     source = "./modules/gcp-instances"
     vm_name = var.vm_name
     vm_size = var.vm_size
-    vm_subnet = google_compute_subnetwork.default.id
+    vm_subnet = var.subnet
     vm_ip = module.ip-address.ip
     data_disk_id = module.disk-data.disk_id
     log_disk_id = module.disk-log.disk_id

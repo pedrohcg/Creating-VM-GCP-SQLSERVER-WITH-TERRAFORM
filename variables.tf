@@ -37,3 +37,8 @@ variable "disk_size_log" {
     description = "Tamanho do disco em bytes"
     type = number
 }
+
+variable "subnet" {
+    description = "Nome da subnet"
+    type = string
+}
