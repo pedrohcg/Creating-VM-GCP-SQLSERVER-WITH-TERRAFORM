@@ -1,1 +1,0 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"disk-data","Source":"./modules/gcp-disks","Dir":"modules/gcp-disks"},{"Key":"disk-log","Source":"./modules/gcp-disks","Dir":"modules/gcp-disks"},{"Key":"gcp-instance","Source":"./modules/gcp-instances","Dir":"modules/gcp-instances"},{"Key":"ip-address","Source":"./modules/ip-address","Dir":"modules/ip-address"}]}
