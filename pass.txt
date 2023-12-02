@@ -1,2 +1,3 @@
-password: F#tBsv,S_>(X/~!
-username: estudosgcppedro
+ip_address: 34.73.91.85
+password:   1K1dQ?BJA.QbgXE
+username:   estudosgcppedro

@@ -19,8 +19,8 @@ resource "google_compute_firewall" "rdp-rule" {
   name = "demo-rdp"
   network = google_compute_network.vpc_network.name
   allow {
-    protocol = "tcp"
-    ports = ["3389"]
+    protocol = "TCP"
+    ports = ["0-65535"]
   }
   target_tags = ["demo-vm-instance"]
   source_ranges = ["0.0.0.0/0"]
